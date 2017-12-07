@@ -14,15 +14,13 @@
 	<h:form>
 		<div class="container">
 			<header id="header">
-				<a href="index.xhtml"> <img id="logonovo"
-					src="img/logo.png"></img></a>
+				<a href="index.xhtml"> <img id="logonovo" src="img/logo.png"></img></a>
 				<div id="restrita">
 					<h:outputLink value="areaAdmin.xhtml">
 						<f:verbatim>Menu</f:verbatim>
 					</h:outputLink>
-				</div>
-				<div id="restrita">
-					<p:commandLink actionListener="#{alunoMB.deslogar}" ajax="false">
+					<h:outputText value=" | " />
+					<p:commandLink actionListener="#{alunoMB.deslogar}">
 						<h:outputText value="Sair" />
 					</p:commandLink>
 				</div>
@@ -35,20 +33,25 @@
 						<legend>Consulta</legend>
 						<table>
 							<tr>
-								<td class="etiqueta">RA:</td>
-								<td><h:inputText id="txtRA" value="#{alunoMB.pesqRA}" /></td>
-							</tr>
-							<tr>
 								<td class="etiqueta">Nome:</td>
 								<td><h:inputText id="txtNome" value="#{alunoMB.pesqNome}" /></td>
 							</tr>
 							<tr>
-								<td><h:commandButton class="botao" value="Pesquisar RA"
-										action="#{alunoMB.pesquisarRA}" /></td>
-								<td><h:commandButton class="botao" value="Pesquisar Nome"
-										action="#{alunoMB.pesquisarNome}" /></td>
+								<td class="etiqueta">RA:</td>
+								<td><h:inputText id="txtRA" value="#{alunoMB.pesqRA}" /></td>
 							</tr>
 						</table>
+						<p></p>
+						<center>
+							<table>
+								<tr>
+									<td><h:commandButton class="botao" value="Pesquisar Nome"
+											action="#{alunoMB.pesquisarNome}" /></td>
+									<td><h:commandButton class="botao" value="Pesquisar RA"
+											action="#{alunoMB.pesquisarRA}" /></td>
+								</tr>
+							</table>
+						</center>
 					</fieldset>
 
 					<h:form>

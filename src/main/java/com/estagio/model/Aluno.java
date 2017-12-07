@@ -29,7 +29,7 @@ public class Aluno {
 	boolean termoContrato;
 
 	boolean obg;
-	
+
 	// Strings de exibi��o
 
 	String dtIni;
@@ -38,8 +38,7 @@ public class Aluno {
 	String rel2;
 	String rel3;
 	String rel4;
-	
-	
+	String dtShow;
 
 	public int getId_al() {
 		return id_al;
@@ -256,7 +255,7 @@ public class Aluno {
 	public void setRel4(String rel4) {
 		this.rel4 = rel4;
 	}
-	
+
 	public String getObrigatorio() {
 		return obrigatorio;
 	}
@@ -280,8 +279,13 @@ public class Aluno {
 	public void setCargaHoraria(int cargaHoraria) {
 		this.cargaHoraria = cargaHoraria;
 	}
-	
-	
-	
+
+	public String getDtShow() {
+		return dtShow;
+	}
+
+	public void setDtShow(String dtShow) {
+		this.dtShow = dtShow;
+	}
 
 }
